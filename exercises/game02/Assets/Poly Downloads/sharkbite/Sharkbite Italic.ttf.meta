@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 18f4452ab039148ccac40f5a87984c1e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sharkbite Italic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 617051bc1a93f429890faa4da8b97040, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
