@@ -1,47 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using TMPro;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0;
-    public TextMeshProUGUI countText;
+    float speed = 8f;
+    float rotateSpeed = 120f;
+    int score = 0;
 
-    private Rigidbody rb;
-
-    private float movementX;
-    private float movementY;
-    private int count;
+    public Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        count = 0;
-        countText.text = count.ToString();
+        
     }
 
-    private void OnMove(InputValue movementValue)
+    private void Update()
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();
-
-        movementX = movementVector.x;
-        movementY = movementVector.y;
-    }
-    private void FixedUpdate()
-    {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-
-        rb.AddForce(movement * speed);
+        float hAxis = Input.GetAxis("Horizontal");
+        transform.Rotate(0, hAxis * rotateSpeed * Time.deltaTime, 0, Space.World);
+        transform.Translate(transform.forward * Time.deltaTime * speed, Space.World);
+        if (speed > 0)
+        {
+            speed -= 4 * Time.deltaTime;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            speed += 5;
+        }
+        speed = Mathf.Clamp(speed, 0, 15);
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("goldfish")) ;
+        if (other.gameObject.CompareTag("goldfish")) 
         {
-            other.gameObject.SetActive(false);
-            count++;
-            countText.text = count.ToString();
+            Destroy(other.gameObject, 10);
+            score++;
+            scoreText.text = score.ToString();
         }
     }
   
