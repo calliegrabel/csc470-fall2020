@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("goldfish")) 
         {
-            Destroy(other.gameObject, 10);
+            Destroy(other.gameObject);
             score++;
             scoreText.text = score.ToString();
         }
