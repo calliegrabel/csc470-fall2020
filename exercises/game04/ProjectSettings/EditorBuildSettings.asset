@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/castleScene.unity
     guid: 41ddfca00e5e549838cda6db3306d9ea
+  - enabled: 1
+    path: Assets/Scenes/winGameScene.unity
+    guid: 8c30b31816c0b4392bca3e53f0fa16cb
   m_configObjects: {}
