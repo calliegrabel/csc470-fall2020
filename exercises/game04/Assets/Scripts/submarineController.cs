@@ -16,6 +16,7 @@ public class submarineController : MonoBehaviour
     float rollSpeed = 80;
 
     public GameObject missilePrefab;
+    public GameObject subaDiverWater;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,9 @@ public class submarineController : MonoBehaviour
         float terrainHeight = Terrain.activeTerrain.SampleHeight(transform.position);
         if(transform.position.y < terrainHeight)
         {
+            Vector3 diverPosition = transform.position - transform.forward * 2 + Vector3.up * 15; 
+            Instantiate(subaDiverWater, diverPosition, Quaternion.identity);
+            Destroy(gameObject);
             //make scubadiver appear
             transform.position = new Vector3(transform.position.x, terrainHeight, transform.position.z);
         }

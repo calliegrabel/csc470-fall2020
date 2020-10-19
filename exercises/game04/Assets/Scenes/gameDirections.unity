@@ -370,9 +370,10 @@ MonoBehaviour:
 
 
 
+
     You must take the submarine down to the underwater
-    castle to find the treasure. Try to shoot all of the sharks before you crash
-    the submarine. If not, they will begin to hunt you when you exit. '
+    castle to find the treasure. You can try to shoot the sharks before you land.
+    To shoot missiles, press Space. To swim when you are the scubadiver, press Space.'
 --- !u!222 &767836468
 CanvasRenderer:
   m_ObjectHideFlags: 0
