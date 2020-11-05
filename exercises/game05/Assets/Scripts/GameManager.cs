@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
             GameObject chicken = Instantiate(chickenPrefab, pos, Quaternion.identity);
             chicken.transform.Rotate(0, Random.Range(0, 360), 0);
         }
+
     }
 
     // Update is called once per frame
