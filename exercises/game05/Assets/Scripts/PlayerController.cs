@@ -54,6 +54,10 @@ public class PlayerController : MonoBehaviour
 
 
         cc.Move(amountToMove);
+        if(moveSpeed > 0)
+        {
+
+        }
 
         prevIsGrounded = cc.isGrounded;
     }
