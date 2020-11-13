@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Text nameText;
     public Text soundText;
     public Text edibleText;
+    public bool canGrow = false;
+    public bool canCut = false;
  
     // Start is called before the first frame update
     void Start()
@@ -56,20 +58,30 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
-    public void SelectUnit(TreeScript toSelect)
+
+    public void OnMouseDown()
     {
-        GameObject[] units = GameObject.FindGameObjectsWithTag("Trees");
+        if(canCut = true)
+        {
+            Debug.Log("Can Cut");
+        }
+        if(canGrow = true)
+        {
+            Debug.Log("Can Grow");
+            Instantiate(treePrefab);
+        }
     }
     public void cutTrees()
     {
-        void OnMouseDown()
-        {
-            Destroy(this);
-        }
-        
-
+        canCut = true;
+        OnMouseDown();
+    }
+    public void growTrees()
+    {
+        canGrow = true;
+        OnMouseDown();
     }
     public void positionAboveNamePanel(AnimalScript animal)
     {

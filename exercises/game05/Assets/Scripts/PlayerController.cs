@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerController : MonoBehaviour
 {
     float moveSpeed = 10;
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController cc;
 
     bool prevIsGrounded = false;
+    bool isMoving = false;
 
     float yVelocity = 0;
     float jumpForce = 0.2f;
@@ -56,7 +58,8 @@ public class PlayerController : MonoBehaviour
         cc.Move(amountToMove);
         if(moveSpeed > 0)
         {
-
+            isMoving = false;
+            
         }
 
         prevIsGrounded = cc.isGrounded;
