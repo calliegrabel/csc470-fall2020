@@ -21,8 +21,13 @@ This one will do the same as above, but will keep track of high scores, allow th
 This one will be the same as above, but will have five levels and more audio attached to certain player actions, like jumping. It will also randomize the order of the minigames for the player to go through so that it is not always the same.
 ## Timeline
 Nov 22: Obstacle course design and layout completed
+
 Nov 24: Matching game design and layout completed and Memorization game design and layout completed
+
 Nov 26: Player movement completed,moving platforms on obstacle course completed, matching blocks flipping over when clicked on completed, and lighting up blocks in a random order for memorization game completed
+
 Nov 28: Timer countdown, player crossing finish line completed, checking to see if blocks are matching, and checking if clicking on right order of blocks for memorization is correct
+
 Nov 30: starting over when wrong or fall, overall timer, keeping track of high score, and changing name and color of player
+
 After: making edits and trying to achieve high bar goal
