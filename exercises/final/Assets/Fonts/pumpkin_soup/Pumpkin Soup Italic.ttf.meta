@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ad85eb7b521c743c49e6043390ad6ff6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Pumpkin Soup
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e68b24d61c6ef4a48ad26db550574337, type: 3}
+  - {fileID: 12800000, guid: bca2f5ad42ed8479fa24f6b7a653468f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

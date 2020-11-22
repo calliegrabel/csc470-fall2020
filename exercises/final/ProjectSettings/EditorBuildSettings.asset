@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/OpeningScreen.unity
+    guid: 4f47d0c0d52564c5eb3354b623c191a5
+  - enabled: 1
+    path: Assets/Scenes/ObstacleCourse.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
