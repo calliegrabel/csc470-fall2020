@@ -2,7 +2,7 @@
 ## Gameplay Description
 Fall Guys is a game that recently came out that was offered for free and I really enjoyed the aspect that there are multiple different mini games that you have to get through. Although my game will obviously not be an multi-player online game, I want to take the same ideas and create mutliple different scenes with unique minigames.
 ## Input
-There will be a platformer character that will go through the minigames by racing through an obstacle course, completing memorization games, and matching games. There will be a timer countdown on the minigames that have an obstacle course that counts down because the player must make it to the finish line before the timer runs out. 
+There will be a platformer character that will go through the minigames by racing through an obstacle course, completing memorization games, and matching games. There will be a timer countdown on the minigames that have an obstacle course that counts down because the player must make it to the finish line before the timer runs out. To jump, the user will hit space and use the other basic controls to turn and move around. 
 ## Visual Style
 The visuals will be very very bright colors, with each scene of each minigame being a different set of bright colors.
 ## Audio Style
