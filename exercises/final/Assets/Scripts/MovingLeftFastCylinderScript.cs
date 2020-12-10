@@ -30,20 +30,5 @@ public class MovingLeftFastCylinderScript : MonoBehaviour
 
         previousPosition = transform.position;
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlayerScriptObstacleCourse player = other.gameObject.GetComponent<PlayerScriptObstacleCourse>();
-            //player.PlatformAttachedTo = this;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlayerScriptObstacleCourse player = other.gameObject.GetComponent<PlayerScriptObstacleCourse>();
-            player.PlatformAttachedTo = null;
-        }
-    }
+    
 }

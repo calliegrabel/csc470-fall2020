@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject playerObstacleCourse;
 
+   
+
     public void Awake()
     {
         if (instance != null && instance != this)

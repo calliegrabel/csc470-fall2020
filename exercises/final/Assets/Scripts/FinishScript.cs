@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FinishScript : MonoBehaviour
 {
+    public Timer timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,8 @@ public class FinishScript : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Maze");
+            timer.finished = true;
+            //SceneManager.LoadScene("Maze");
         }
     }
 }

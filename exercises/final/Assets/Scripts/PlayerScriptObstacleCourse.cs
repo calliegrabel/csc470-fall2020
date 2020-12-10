@@ -9,6 +9,8 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
     public Color yellow;
     public Color pink;
 
+    public Animator anim;
+
     public Renderer rendRightLeg;
     public Renderer rendLeftLeg;
     public Renderer rendLeftArm;
@@ -25,9 +27,11 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
     float jumpForce = 0.7f;
     float gravityModifier = 0.2f;
 
-    public MovingUpPlatformScript PlatformAttachedTo;
+    public MovingPlatform PlatformAttachedTo;
 
     public GameObject player;
+
+    Vector3 checkpoint;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +70,11 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
             rendLeftArm.material.color = pink;
             rendBody.material.color = pink;
         }
+      
+        checkpoint = transform.position;
+        checkpoint.y += 110;
+        
+        
     }
 
     // Update is called once per frame
@@ -80,6 +89,7 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
             yVelocity = yVelocity + Physics.gravity.y * gravityModifier * Time.deltaTime;
             if (Input.GetKeyUp(KeyCode.Space) && yVelocity > 0)
             {
+                anim.SetBool("Jumping", true);
                 yVelocity = 0;
             }
         }
@@ -88,11 +98,13 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
         {
             if (prevIsGrounded)
             {
+                anim.SetBool("Jumping", false);
                 yVelocity = 0;
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                anim.SetBool("Jumping", true);
                 yVelocity = jumpForce;
             }
         }
@@ -103,7 +115,22 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
         {
             amountToMove += PlatformAttachedTo.DistanceMoved;
         }
-
+        if(vAxis == 0)
+        {
+            anim.SetBool("Walking", false);
+        }
+        else
+        {
+            anim.SetBool("Walking", true);
+        }
+        if (hAxis == 0)
+        {
+            anim.SetBool("Jumping", false);
+        }
+        else
+        {
+            anim.SetBool("Jumping", true);
+        }
 
         cc.Move(amountToMove);
        
@@ -111,5 +138,20 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
         prevIsGrounded = cc.isGrounded;
     
     }
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("fallPlane"))
+        {
+            Debug.Log("Fell Down!");
+            Debug.Log(checkpoint);
+            cc.enabled = false;
+            transform.position = checkpoint;
+            cc.enabled = true;
+           
+  
+           
+
+        }
+    }
+
 }
