@@ -72,7 +72,7 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
         }
       
         checkpoint = transform.position;
-        checkpoint.y += 110;
+        checkpoint.y += 50;
         
         
     }
@@ -140,6 +140,11 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("CheckPoint"))
+        {
+            checkpoint = transform.position;
+            checkpoint.y += 50;
+        }
         if (other.gameObject.CompareTag("fallPlane"))
         {
             Debug.Log("Fell Down!");
@@ -147,11 +152,9 @@ public class PlayerScriptObstacleCourse : MonoBehaviour
             cc.enabled = false;
             transform.position = checkpoint;
             cc.enabled = true;
-           
-  
-           
 
         }
+        
     }
 
 }
