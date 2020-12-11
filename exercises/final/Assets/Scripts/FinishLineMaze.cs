@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FinishScript : MonoBehaviour
+public class FinishLineMaze : MonoBehaviour
 {
     public Timer timer;
     // Start is called before the first frame update
@@ -19,10 +19,10 @@ public class FinishScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             timer.finished = true;
-            SceneManager.LoadScene("Maze");
+            SceneManager.LoadScene("WinningScene");
         }
     }
 }

@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public Text timerText;
     private float startTime;
     public bool finished = false;
+    public string endMinutes;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +32,7 @@ public class Timer : MonoBehaviour
     {
         finished = true;
         timerText.color = Color.yellow;
+
+        
     }
 }

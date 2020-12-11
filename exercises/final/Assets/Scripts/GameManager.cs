@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
 
     public int saveColor;
+    public Timer timer;
 
     public static GameManager instance;
 
